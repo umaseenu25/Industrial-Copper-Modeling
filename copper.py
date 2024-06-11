@@ -17,7 +17,7 @@ def predict_status(ctry,itmtp,aplcn,wth,prdrf,qtlg,cstlg,tknslg,slgplg,itmdt,itm
     dydm= int(deldtmn)
     dydy= int(deldtyr)
     #modelfile of the classification
-    with open("c:\Users\Administrator\Downloads\Classification_model.pkl","rb") as f:
+    with open(r"c:\Users\Administrator\Downloads\Classification_model.pkl","rb") as f:
         model_class=pickle.load(f)
 
     user_data= np.array([[ctry,itmtp,aplcn,wth,prdrf,qtlg,cstlg,tknslg,
@@ -42,7 +42,7 @@ def predict_selling_price(ctry,sts,itmtp,aplcn,wth,prdrf,qtlg,cstlg,
     dydm= int(deldtmn)
     dydy= int(deldtyr)
     #modelfile of the classification
-    with open("c:\Users\Administrator\Downloads\Regression_Model.pkl","rb") as f:
+    with open(r"c:\Users\Administrator\Downloads\Regression_Model.pkl","rb") as f:
         model_regg=pickle.load(f)
 
     user_data= np.array([[ctry,sts,itmtp,aplcn,wth,prdrf,qtlg,cstlg,tknslg,
